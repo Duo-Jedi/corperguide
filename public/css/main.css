@@ -1,0 +1,192 @@
+/* Text Sizes */
+/* Paddings */
+/* Mixins */
+/* Text Sizes */
+.text-lg {
+  font-size: 30px; }
+
+.text-md {
+  font-size: 18px; }
+
+.text-sm {
+  font-size: 12px; }
+
+.text-xs {
+  font-size: 9px; }
+
+.no-padding {
+  padding: 0; }
+
+.padding-xs {
+  padding: 8px; }
+
+.padding-sm {
+  padding: 15px; }
+  @media (max-width: 780px) {
+    .padding-sm {
+      padding: 8px; } }
+
+.padding-md {
+  padding: 25px; }
+  @media (max-width: 780px) {
+    .padding-md {
+      padding: 12px; } }
+
+.padding-lg {
+  padding: 35px; }
+  @media (max-width: 780px) {
+    .padding-lg {
+      padding: 16px; } }
+
+.padding-xl {
+  padding: 50px; }
+  @media (max-width: 780px) {
+    .padding-xl {
+      padding: 25px; } }
+
+/* Backgrounds */
+.no-bg {
+  background: none; }
+
+.bg-white {
+  background: #fff; }
+
+.bg-grey {
+  background: #eeeeee; }
+
+/* Borders */
+.border-grey {
+  border: 1px solid #eeeeee; }
+
+/* Margins */
+.no-margin {
+  margin: 0; }
+
+.margin-auto {
+  margin: 0 auto; }
+
+.margin-top-md {
+  margin-top: 20px; }
+
+.margin-top-lg {
+  margin-top: 40px; }
+
+.margin-top-xxxl {
+  margin-top: 100px; }
+
+.margin-bottom-md {
+  margin-bottom: 20px; }
+
+.margin-bottom-lg {
+  margin-top: 40px; }
+
+.margin-sm {
+  margin: 20px; }
+
+.margin-top-sm {
+  margin-top: 15px; }
+
+.margin-bottom-sm {
+  margin-bottom: 10px; }
+
+/* Text Colors */
+.text-white {
+  color: #fff; }
+
+.navbar, header {
+  border-radius: 0px; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 7, 2016, 1:49:35 AM
+    Author     : Lahray
+*/
+.pre-loader {
+  text-align: center;
+  background: #fff;
+  color: #9e2329;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000; }
+  .pre-loader .loader-icon {
+    vertical-align: center;
+    margin-top: 15%; }
+
+h1 {
+  font-family: 'Aref Ruqaa', serif; }
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; }
+
+p, span, label, .form-control, .btn {
+  font-family: 'Roboto', sans-serif; }
+
+.btn {
+  border-radius: 2px; }
+
+.landing-page .banner {
+  background: #050100;
+  color: white; }
+  .landing-page .banner .btn {
+    background: rgba(49, 50, 47, 0.6);
+    color: #fff;
+    margin-right: 30px;
+    padding: 10px 30px;
+    border: 1px solid #31322f; }
+    .landing-page .banner .btn:hover {
+      background: rgba(23, 24, 22, 0.6);
+      color: gray; }
+.landing-page h1 {
+  color: #2c3216;
+  text-shadow: 1px 1px #fff;
+  font-size: 80px; }
+.landing-page h2 {
+  color: #9e2329; }
+.landing-page .solved-problems div {
+  padding: 10px; }
+  .landing-page .solved-problems div div {
+    border: 1px solid #efefef;
+    min-height: 120px; }
+.landing-page .how-it-works-steps div {
+  padding: 30px; }
+  .landing-page .how-it-works-steps div div {
+    background: #fff;
+    padding: 15px; }
+    .landing-page .how-it-works-steps div div .number {
+      font-weight: bold; }
+      .landing-page .how-it-works-steps div div .number span {
+        border-radius: 30%;
+        border: 1px solid #9e2329;
+        font-size: 20px;
+        padding: 15px; }
+    .landing-page .how-it-works-steps div div h4, .landing-page .how-it-works-steps div div .number {
+      color: #9e2329; }
+
+.jumbotron {
+  background: none; }
+
+.text-primary-color {
+  color: #050100; }
+
+.bg-primary-color {
+  background: #050100; }
+
+.bg-secondary-color {
+  background: #9e2329; }
+
+.text-italics {
+  font-style: italics; }
+
+.text-primary-color {
+  color: #050100; }
+
+.text-secondary-color {
+  color: #9e2329; }
+
+/*# sourceMappingURL=main.css.map */

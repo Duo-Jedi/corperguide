@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/../corperwee-spring/target/classes" />
+    <output-test url="file://$MODULE_DIR$/../corperwee-spring/target/test-classes" />
+    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../corperwee-spring">
+      <sourceFolder url="file://$MODULE_DIR$/../corperwee-spring/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../corperwee-spring/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../corperwee-spring/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

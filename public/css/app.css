@@ -1,0 +1,110 @@
+/* app css stylesheet */
+
+/* to solve modal back-drop issue, find issue on github*/
+.modal-backdrop {
+    position: fixed;
+}
+
+.alertModal {
+    height : 100%;
+}
+
+.alert {
+    display: none;
+}
+
+.alert.unhide {
+    display: block;
+}
+
+.modal-header {
+    margin-bottom: 0px;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+#searchBar {
+    width: 200px;
+    margin: 0px;
+    display: inline;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+.nojs {
+    padding: 2px 2px 2px 6px;
+    margin-bottom: 5px;
+    background: #ff0000;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+}
+
+.glyphicon {
+    margin-right: 5px;
+}
+
+footer {
+    background: #333;
+    color: #eee;
+    font-size: 11px;
+    padding: 20px;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+.user-image-thumbnail{
+    width: 40px;
+    height: 40px;
+}
+
+.dropdown-toggle.user-account-dropdown{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

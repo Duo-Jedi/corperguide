@@ -1,0 +1,132 @@
+@import "_global.scss";
+@import "_reset.scss";
+
+$primary-color : #050100;
+$secondary-color : #9e2329;
+
+
+.pre-loader {
+    text-align:center;
+    background:#fff;
+    color:$secondary-color;
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:1000;
+
+    .loader-icon {
+        vertical-align:center;
+        margin-top:15%;
+    }
+}
+
+
+h1, {
+    font-family: 'Aref Ruqaa', serif;
+}
+
+h2, h3, h4, h5, h6  {
+    font-family:'Roboto', sans-serif;
+    font-weight:bold;
+}
+
+p, span, label, .form-control, .btn {
+    font-family:'Roboto', sans-serif;
+}
+
+.btn {
+    border-radius:2px;
+}
+
+.landing-page {
+    .banner {
+        background: $primary-color;
+        color:white;
+
+        .btn {
+            background: rgba(49,50,47,.6);
+            color:#fff;
+            margin-right:30px;
+            padding:10px 30px;
+            border:1px solid rgb(49,50,47);
+
+            &:hover {
+                background: darken(rgba(49,50,47,.6),10%);
+                color:darken(#fff,50%);
+            }
+         }
+    }
+
+    h1 {
+        color: #2c3216;
+        text-shadow:1px 1px #fff;
+        font-size:80px;
+    }
+
+    h2 {
+        color:$secondary-color;
+    }
+
+    .solved-problems {
+        div { 
+            padding:10px;
+            div {
+                border:1px solid #efefef;
+                min-height:120px;
+            }
+        }
+    }
+
+    .how-it-works-steps {
+        div {
+            padding:30px;
+            div {
+                .number {
+                    font-weight:bold;
+                    span {
+                        border-radius:30%;
+                        border:1px solid $secondary-color;
+                        font-size:20px;
+                        padding:15px;
+                    }
+                }
+
+                h4, .number {
+                    color: $secondary-color;
+                }
+                background:#fff;
+                padding:15px;
+            }
+        }
+    }
+
+
+}
+
+.jumbotron {
+    background: none;
+}
+
+.text-primary-color {
+    color:$primary-color;
+}
+
+.bg-primary-color {
+    background: $primary-color;
+}
+
+.bg-secondary-color {
+    background: $secondary-color;
+}
+
+.text-italics {
+    font-style: italics;
+}
+
+.text-primary-color {
+    color:$primary-color;
+}
+
+.text-secondary-color {
+    color:$secondary-color;
+}

@@ -1,0 +1,23 @@
+<!--putting this here helps me detach the sign in modal here from the one on the landing page-->
+<div id="injectSignInModalHere"></div>
+
+<div ng-include="'partials/header.html'"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active">
+                    <a ui-sref="corperwee.home">Search</a>
+                </li>
+                <li>
+                    <a ui-sref="corperwee.addPlace">Add Location</a>
+                </li>
+            </ul>
+            <div ui-view>
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+

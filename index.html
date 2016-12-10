@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myApp" ng-controller="MainController">
+	<head ng-cloak>
+		<title ng-bind="title"></title>
+		<meta charset="utf-8">
+		<meta name = "description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<style>
+			[ng-cloak] {
+				display: none;
+			}
+		</style>
+
+	<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Josefin+Sans:700|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="public/fonts/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="public/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="public/css/main.css"/>
+		<link rel="stylesheet" href="public/css/app.css"/>
+		<link rel="stylesheet" type="text/css" ng-href="public/css/{{style}}">
+		<link rel="stylesheet" href="public/lib/ladda/dist/ladda-themeless.min.css"/>
+		<script src="public/lib/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<div class="pre-loader">
+			<div class="loader-icon"><i class="fa fa-circle-o-notch fa-spin fa-4x"></i></div>
+		</div>
+
+		<noscript>
+			<div class="nojs">Javascript is either disabled or not supported in your browser. Please enable it or use a Javascript enabled browser.</div>
+		</noscript>
+
+		<div ui-view></div>
+
+		<script>window.jQuery || document.write('<script src="public/lib/jquery-1.11.1.min.js"><\/script>')</script>
+
+		<script src="public/bootstrap/js/bootstrap.min.js"></script>
+		<script src="public/js/script.js"></script>
+
+		<!-- In production use:
+          <script src="//ajax.googleapis.com/ajax/libs/angularpublic/js/x.x.x/angular.min.js"></script>
+        -->
+
+		<script src="public/lib/angular/angular.js"></script>
+		<script src="public/lib/angular/angular-route.js"></script>
+		<script src="public/lib/angular/angular-ui-router.min.js"></script>
+		<script src="public/lib/angular/angular-cookies.js"></script>
+		<script src="public/lib/angular/angular-resource.js"></script>
+		<script src="public/lib/angular/angular-animate.js"></script>
+		<script src="public/lib/angular/ui-bootstrap-tpls-1.1.2.js"></script>
+		<script src="public/lib/http-auth-interceptor.js"></script>
+		<script src="public/lib/ladda/dist/spin.min.js"></script>
+		<script src="public/lib/ladda/dist/ladda.min.js"></script>
+		<script src="public/lib/angular-ladda/dist/angular-ladda.min.js"></script>
+		<script src="public/lib/webcam.min.js"></script>
+		<script src="public/js/app.js"></script>
+		<script src="public/js/services.js"></script>
+		<script src="public/js/controllers.js"></script>
+		<script src="public/js/filters.js"></script>
+		<script src="public/js/directives.js"></script>
+	</body>
+</html>
+
