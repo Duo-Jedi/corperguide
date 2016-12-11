@@ -19,20 +19,20 @@ angular.module('myApp', [
         $stateProvider
         .state('login',{
             url: '/login',
-            templateUrl: 'public/partials/login.html'
+            templateUrl: 'partials/login.html'
         })
         .state('signup',{
              url: '/signup',
-             templateUrl: 'public/partials/signup.html'
+             templateUrl: 'partials/signup.html'
         })
         .state('welcome', {
             url: '/welcome',
             abstract: true,
             controller: function ($rootScope) {
                 $rootScope.logged_in = false;
-                $rootScope.navbar_url = 'public/partials/fragments/logout_navbar.html';
+                $rootScope.navbar_url = 'partials/fragments/logout_navbar.html';
             },
-            templateUrl: 'public/partials/welcomePage.html',
+            templateUrl: 'partials/welcomePage.html',
             resolve: {
                 user: ['authService', '$q', function (authService, $q) {
                     if (authService.user) {
@@ -44,23 +44,23 @@ angular.module('myApp', [
             .state('welcome.landing', {
                 url: '/landing',
                 controller: 'LandingController',
-                templateUrl: 'public/partials/landing_page.html'
+                templateUrl: 'partials/landing_page.html'
             })
             .state('welcome.resetPassword', {
                 url: '/resetPassword',
                 controller: 'ResetPasswordCtrl',
-                templateUrl: 'public/partials/resetPassword.html'
+                templateUrl: 'partials/resetPassword.html'
             })
             .state('welcome.changePassword', {
                 url: '/changePassword?id&token',
                 controller: 'ChangePasswordCtrl',
-                templateUrl: 'public/partials/changePassword.html'
+                templateUrl: 'partials/changePassword.html'
             })
             .state('corperwee', {
                 abstract: true,
                 url: '/corperwee',
                 controller: 'CorperWeeCtrl',
-                templateUrl: 'public/partials/corperwee.html',
+                templateUrl: 'partials/corperwee.html',
                 resolve: {
                     //user:['authService','$q',function(authService,$q){
                     //  return authService.user || $q.reject({unAuthorized:true});
@@ -75,32 +75,32 @@ angular.module('myApp', [
             .state('corperwee.home', {
                 url: '/home',
                 controller: 'HomeController',
-                templateUrl: 'public/partials/fragments/home.html'
+                templateUrl: 'partials/fragments/home.html'
             })
             .state('corperwee.viewProfile', {
                 url: '/viewProfile/:username',
                 controller: 'ViewProfileCtrl',
-                templateUrl: 'public/partials/fragments/profile/viewProfile.html'
+                templateUrl: 'partials/fragments/profile/viewProfile.html'
             })
             .state('corperwee.updateProfile', {
                 url: '/updateProfile',
                 controller: 'UpdateProfileCtrl',
-                templateUrl: 'public/partials/fragments/profile/updateProfile.html'
+                templateUrl: 'partials/fragments/profile/updateProfile.html'
             })
             .state('corperwee.addPlace',{
                 url: '/addPlace',
                 controller: 'AddPlaceCtrl',
-                templateUrl: 'public/partials/fragments/place/addPlace.html'
+                templateUrl: 'partials/fragments/place/addPlace.html'
             })
             .state('corperwee.viewPlace', {
                 url: '/viewPlace/:id',
                 controller: 'ViewPlaceCtrl',
-                templateUrl: 'public/partials/fragments/place/viewPlace.html'
+                templateUrl: 'partials/fragments/place/viewPlace.html'
             })
             .state('corperwee.updatePlace', {
                 url: '/updatePlace/:id',
                 controller: 'UpdatePlaceCtrl',
-                templateUrl: 'public/partials/fragments/place/updatePlace.html',
+                templateUrl: 'partials/fragments/place/updatePlace.html',
                 resolve: {
                     place: function (authService, placeService, alertModalService, $stateParams, $state) {
                         return placeService.getPlace($stateParams.id).then(function (data) {
@@ -123,7 +123,7 @@ angular.module('myApp', [
             .state('corperwee.updatePassword', {
                 url: '/updatePassword',
                 controller: 'UpdatePasswordCtrl',
-                templateUrl: 'public/partials/fragments/profile/updatePassword.html'
+                templateUrl: 'partials/fragments/profile/updatePassword.html'
             });
         $urlRouterProvider.otherwise('/corperwee/home');
         $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';

@@ -1,5 +1,5 @@
-<div class="login">
-    <div ng-include="'public/partials/header.html'"></div>
+<div ng-include="'partials/header.html'"></div>
+  <div class="login">
     <div class="container">
         <div class="row ">
             <div class="col-md-6 bg-grey col-md-offset-3 padding-md">
@@ -17,64 +17,6 @@
                         </div>
 
                         <div class="row">
-                           <div class="col-md-6">
-                              <div class="form-group has-feedback"
-                                   ng-class="{'has-error' : signUpForm.firstname.$touched && signUpForm.firstname.$invalid, 'has-success' : signUpForm.firstname.$touched && signUpForm.firstname.$valid}">
-                                  <label for="signup.firstname" class="">First Name</label>
-
-                                  <div class="">
-                                      <input type="text" name="firstname" ng-required="true" ng-minlength="2"
-                                             ng-maxlength="20" class="form-control" id="signup.firstname"
-                                             placeholder="First Name" ng-model="newUser.firstname">
-
-                                      <div ng-show="signUpForm.firstname.$touched">
-                                                  <span class="glyphicon glyphicon-ok form-control-feedback"
-                                                        aria-hidden="true"
-                                                        ng-show="signUpForm.firstname.$valid"></span>
-                                          <span class="glyphicon glyphicon-remove form-control-feedback"
-                                                aria-hidden="true"
-                                                ng-show="signUpForm.firstname.$invalid"></span>
-                                          <span class="sr-only">(success)</span>
-                                          <span class="help-block"
-                                                ng-show="signUpForm.firstname.$error.required">Firstname cannot be empty</span>
-                                          <span class="help-block"
-                                                ng-show="signUpForm.firstname.$error.minlength">FirstName must be more than 5 characters</span>
-                                          <span class="help-block"
-                                                ng-show="signUpForm.firstname.$error.maxlength">Firstname must not exceed 20 characters</span>
-                                      </div>
-                                  </div>
-                              </div>
-                           </div>
-
-                           <div class="col-md-6">
-                              <div class="form-group has-feedback"
-                                   ng-class="{'has-error' : signUpForm.lastname.$touched && signUpForm.lastname.$invalid, 'has-success' : signUpForm.lastname.$touched && signUpForm.lastname.$valid}">
-                                  <label for="signup.lastname" class="">Last Name</label>
-
-                                  <div class="">
-                                      <input name="lastname" ng-required="true" ng-minlength="5" ng-maxlength="20"
-                                             type="text" class="form-control" id="signup.lastname"
-                                             placeholder="Last Name" ng-model="newUser.lastname">
-
-                                      <div ng-show="signUpForm.lastname.$touched">
-                                                  <span class="glyphicon glyphicon-ok form-control-feedback"
-                                                        aria-hidden="true"
-                                                        ng-show="signUpForm.lastname.$valid"></span>
-                                          <span class="glyphicon glyphicon-remove form-control-feedback"
-                                                aria-hidden="true"
-                                                ng-show="signUpForm.lastname.$invalid"></span>
-                                          <span class="sr-only">(success)</span>
-                                          <span class="help-block"
-                                                ng-show="signUpForm.lastname.$error.required">LastName cannot be empty</span>
-                                          <span class="help-block"
-                                                ng-show="signUpForm.lastname.$error.minlength">LastName must be more than 5 characters</span>
-                                          <span class="help-block"
-                                                ng-show="signUpForm.lastname.$error.maxlength">Lasttname must not exceed 20 characters</span>
-                                      </div>
-
-                                  </div>
-                              </div>
-                           </div>
                            <div class="col-md-6">
                               <div class="form-group has-feedback"
                                  ng-class="{'has-error' : signUpForm.email.$touched && signUpForm.email.$invalid, 'has-success' : signUpForm.email.$touched && signUpForm.email.$valid}">
@@ -101,7 +43,9 @@
 
                                 </div>
                             </div>
+
                            </div>
+
                            <div class="col-md-6">
                             <div class="form-group has-feedback"
                                  ng-class="{'has-error' : signUpForm.username.$touched && signUpForm.username.$invalid, 'has-success' : signUpForm.username.$touched &&  signUpForm.username.$valid}">
@@ -131,6 +75,7 @@
                                 </div>
                             </div>
                            </div>
+
                            <div class="col-md-6">
                              <div class="form-group has-feedback"
                                  ng-class="{'has-error' : signUpForm.password.$touched && signUpForm.password.$invalid, 'has-success' : signUpForm.password.$touched && signUpForm.password.$valid}">
@@ -199,62 +144,11 @@
                             </div>
                            </div>
 
-                           <div class="col-md-6">
-                             <div class="form-group has-feedback"
-                                 ng-class="{'has-error' : signUpForm.phoneNumber.$touched && signUpForm.phoneNumber.$invalid, 'has-success' : signUpForm.phoneNumber.$touched && signUpForm.phoneNumber.$valid}">
-                                <label for="signup.phoneNumber" class="">Phone Number</label>
-
-                                <div class="">
-                                    <input name="phoneNumber" type="tel" class="form-control"
-                                           id="signup.phoneNumber" placeholder="Phone number here"
-                                           ng-model="newUser.phoneNumber"
-                                           ng-maxlength="11" ng-minlength="11" ng-pattern="phoneNumberRegex"
-                                           required="true" ng-required="true">
-
-                                    <div ng-show="signUpForm.phoneNumber.$touched">
-                                                <span class="glyphicon glyphicon-ok form-control-feedback"
-                                                      aria-hidden="true"
-                                                      ng-show="signUpForm.phoneNumber.$valid"></span>
-                                        <span class="glyphicon glyphicon-remove form-control-feedback"
-                                              aria-hidden="true"
-                                              ng-show="signUpForm.phoneNumber.$invalid"></span>
-                                        <span class="sr-only">(success)</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.phoneNumber.$error.required">Phone number cannot be empty</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.phoneNumber.$invalid">Invalid Phone Number: Must be 11 digits</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="form-group has-feedback"
-                                 ng-class="{'has-error' : signUpForm.stateCode.$touched && signUpForm.stateCode.$invalid, 'has-success' : signUpForm.stateCode.$touched && signUpForm.stateCode.$valid}">
-                                <label for="signup.stateCode" class="">State Code</label>
-
-                                <div class="">
-                                    <input type="text" class="form-control" id="signup.stateCode"
-                                           placeholder="State Code" ng-model="newUser.stateCode"
-                                           ng-required="true" name="stateCode">
-
-                                    <div ng-show="signUpForm.stateCode.$touched">
-                                                <span class="glyphicon glyphicon-ok form-control-feedback"
-                                                      aria-hidden="true"
-                                                      ng-show="signUpForm.stateCode.$valid"></span>
-                                        <span class="glyphicon glyphicon-remove form-control-feedback"
-                                              aria-hidden="true"
-                                              ng-show="signUpForm.stateCode.$invalid"></span>
-                                        <span class="sr-only">(success)</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.stateCode.$error.required">State Code cannot be empty</span>
-                                    </div>
-                                </div>
-                            </div>
-                           </div>
+                          
+                           
 
                            <div ng-form="locationDetails">
-                           <div class="col-md-6">
+                           <div class="col-md-12">
                              <div class="form-group">
                                     <label for="signup.state">State</label>
                                     <select name="state" id="signup.state" class="form-control"
@@ -268,44 +162,22 @@
                                     </select>
                                 </div>
                            </div>
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                    <label for="signup.lga">L.G.A</label>
-                                    <select name="lga" id="signup.lga" class="form-control"
-                                            ng-model="newUser.lga" ng-required="true">
-                                        <option value="">Please select a LGA</option>
-                                        <option value="awka-south">Awka-South</option>
-                                        <option value="awka-north">Awka-North</option>
-                                    </select>
-                                </div>
-                           </div>
-                           <div class="col-md-12">
-                              <div class="form-group">
-                                    <label for="signup.town">Town</label>
-                                    <select id="signup.town" class="form-control" ng-model="newUser.town"
-                                            name="town" ng-required="true">
-                                        <option value="">Please select a Town</option>
-                                        <option value="amawbia">AMAWBIA</option>
-                                        <option value="unizik">UNIZIK</option>
-                                    </select>
-                                    <div class="has-error"><p class="text-center">Please select all location
-                                        options</p>
-                                        <span class="help-block text-center text-danger"
-                                              ng-show="locationDetails.$touched && locationDetails.$invalid">Please select all location options</span>
-                                    </div>
-                                </div>
-                           </div>
                            </div>
                         </div>
-                        <button type="button" class="btn btn-primary btn-block" ng-disabled="signUpForm.$invalid"
-                                id="signup-btn" ng-click="signUp()" ladda="signUpLoading" data-style="expand-right">Sign Up
-                        </button>
+                        <div class="">
+                          <button type="button" class="btn btn-primary" ng-disabled="signUpForm.$invalid"
+                                  id="signup-btn" ng-click="signUp()" ladda="signUpLoading" data-style="expand-right">Sign Up
+                          </button>
+                          <span class="pull-right">
+                               Already registered?
+                            <a class="" href="#/login">Login</a>
+                        </span>
+                        </div>
                         <br/>
                     </form>
 
                     <div>
-                        Already registered?
-                        <a class="" href="#/login">Login</a>
+                       
                     </div>
 
                 </div>
@@ -314,5 +186,5 @@
     </div>
     <br/>
     <br/>
-    <div ng-include="'public/partials/footer.html'"></div>
+    <div class="navbar-fixed-bottom" ng-include="'partials/footer.html'"></div>
 </div>
