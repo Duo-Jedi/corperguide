@@ -9,54 +9,49 @@
                     <div ng-show="invalidLogin" class="alert unhide alert-danger fade in" id="signInAlert">
                         <p>{{errorMessage}}</p>
                     </div>
-                    <form name="signUpForm" novalidate>
-                        <div ng-show="failedSignUp" class="alert alert-danger fade in unhide"
-                             id="signupfailurealert">
-                            <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
-                            <h4>{{errorMessage}}</h4>
+                    <form name="signUpForm" class="signup-form" novalidate>
+                        <div ng-show="failedSignUp" class="alert alert-danger fade in unhide" id="signupfailurealert">
+                            <p>{{errorMessage}}</p>
                         </div>
 
                         <div class="row">
                            <div class="col-md-6">
                               <div class="form-group has-feedback"
                                  ng-class="{'has-error' : signUpForm.email.$touched && signUpForm.email.$invalid, 'has-success' : signUpForm.email.$touched && signUpForm.email.$valid}">
-                                <label for="signup.email" class="">Email Address</label>
+                                <label for="signup.email" class="pull-left">
+                                    Email Address
+                                </label>
+                                <input name="email" type="email" ng-required="true" required="true"
+                                       class="form-control" id="signup.email"
+                                       ng-class="{'form-control-error' : signUpForm.email.$touched && signUpForm.email.$invalid, 'form-control-success' : signUpForm.email.$touched && signUpForm.email.$valid}"
+                                       placeholder="Email Address" ng-model="newUser.email">
 
-                                <div class="">
-                                    <input name="email" type="email" ng-required="true" required="true"
-                                           class="form-control" id="signup.email"
-                                           placeholder="Email Address" ng-model="newUser.email">
-
-                                    <div ng-show="signUpForm.email.$touched">
-                                                <span class="glyphicon glyphicon-ok form-control-feedback"
-                                                      aria-hidden="true"
-                                                      ng-show="signUpForm.email.$valid"></span>
-                                        <span class="glyphicon glyphicon-remove form-control-feedback"
-                                              aria-hidden="true"
-                                              ng-show="signUpForm.email.$invalid"></span>
-                                        <span class="sr-only">(success)</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.email.$error.required">Email cannot be empty</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.email.$error.email">Invalid Email</span>
-                                    </div>
-
+                                <div class="form-control-feedback" ng-show="signUpForm.email.$touched">
+                                            <span class="glyphicon glyphicon-ok "
+                                                  aria-hidden="true"
+                                                  ng-show="signUpForm.email.$valid"></span>
+                                    <span class="glyphicon glyphicon-remove "
+                                          aria-hidden="true"
+                                          ng-show="signUpForm.email.$invalid"></span>
+                                    <span class="sr-only">(success)</span>
                                 </div>
-                            </div>
-
+                              <div class="text-sm text-danger form-input-msg"  ng-show="signUpForm.email.$touched && signupForm.email.$invalid">
+                                  <span ng-show="signUpForm.email.$error.required && signupForm.email.$pristine">Email cannot be empty</span>
+                                  <span ng-show="signUpForm.email.$error.email">Invalid Email</span>
+                              </div>
+                              </div>
                            </div>
 
                            <div class="col-md-6">
                             <div class="form-group has-feedback"
                                  ng-class="{'has-error' : signUpForm.username.$touched && signUpForm.username.$invalid, 'has-success' : signUpForm.username.$touched &&  signUpForm.username.$valid}">
                                 <label for="signup.username" class="">Username</label>
-
-                                <div class="">
                                     <input name="username" ng-required="true" ng-minlength="5" ng-maxlength="20"
                                            type="text" class="form-control" id="signup.username"
+                                           ng-class="{'form-control-error' : signUpForm.username.$touched && signUpForm.username.$invalid, 'form-control-success' : signUpForm.username.$touched &&  signUpForm.username.$valid}"
                                            placeholder="Username" ng-model="newUser.username">
 
-                                    <div ng-show="signUpForm.username.$touched">
+                                    <div ng-show="signUpForm.username.$touched" class="form-control-feedback">
                                                 <span class="glyphicon glyphicon-ok form-control-feedback"
                                                       aria-hidden="true"
                                                       ng-show="signUpForm.username.$valid"></span>
@@ -64,45 +59,39 @@
                                               aria-hidden="true"
                                               ng-show="signUpForm.username.$invalid"></span>
                                         <span class="sr-only">(success)</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.username.$error.required">UserName cannot be empty</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.username.$error.minlength">UserName must be more than 5 characters</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.username.$error.maxlength">UserName must not exceed 20 characters</span>
                                     </div>
-
-                                </div>
+                                    <div class="text-sm text-danger form-input-msg" ng-show="signUpForm.username.$touched && signUpForm.username.$invalid">
+                                        <span ng-show="signUpForm.username.$error.required">UserName cannot be empty</span>
+                                        <span ng-show="signUpForm.username.$error.minlength">UserName must be more than 5 characters</span>
+                                        <span ng-show="signUpForm.username.$error.maxlength">UserName must not exceed 20 characters</span>
+                                    </div>
                             </div>
                            </div>
-
+                        </div>
+                        <div class="row">
                            <div class="col-md-6">
                              <div class="form-group has-feedback"
                                  ng-class="{'has-error' : signUpForm.password.$touched && signUpForm.password.$invalid, 'has-success' : signUpForm.password.$touched && signUpForm.password.$valid}">
                                 <label for="signup.password" class="">Password</label>
 
-                                <div class="">
                                     <input name="password" ng-required="true" ng-minlength="8" ng-maxlength="20"
                                            type="password" class="form-control" id="signup.password"
+                                           ng-class="{'form-control-error' : signUpForm.password.$touched && signUpForm.password.$invalid, 'form-control-success' : signUpForm.password.$touched && signUpForm.password.$valid}"
                                            placeholder="Password" ng-model="newUser.password">
 
-                                    <div ng-show="signUpForm.password.$touched">
-                                                <span class="glyphicon glyphicon-ok form-control-feedback"
-                                                      aria-hidden="true"
-                                                      ng-show="signUpForm.password.$valid"></span>
-                                        <span class="glyphicon glyphicon-remove form-control-feedback"
+                                    <div ng-show="signUpForm.password.$touched" class=" form-control-feedback">
+                                        <span class="glyphicon glyphicon-ok"
+                                          aria-hidden="true" ng-show="signUpForm.password.$valid"></span>
+                                        <span class="glyphicon glyphicon-remove"
                                               aria-hidden="true"
                                               ng-show="signUpForm.password.$invalid"></span>
                                         <span class="sr-only">(success)</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.password.$error.required">Password cannot be empty</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.password.$error.minlength">Password must be more than 5 characters</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.password.$error.maxlength">Password must not exceed 20 characters</span>
                                     </div>
-
-                                </div>
+                                    <div class="text-sm text-muted text-danger form-input-msg" ng-show="signUpForm.password.$touched && signUpForm.password.$invalid">
+                                        <span ng-show="signUpForm.password.$error.required">Password cannot be empty</span>
+                                        <span ng-show="signUpForm.password.$error.minlength">Password must be more than 5 characters</span>
+                                        <span ng-show="signUpForm.password.$error.maxlength">Password must not exceed 20 characters</span>
+                                    </div>
                             </div>
                            </div>
 
@@ -115,9 +104,8 @@
                                     <input name="confirmPassword" ng-required="true"
                                            type="password" class="form-control"
                                            id="signup.confirmPassword" placeholder="Confirm Password"
-                                           ng-minlength="8"
-                                           ng-maxlength="20"
-                                           ng-model="newUser.confirmPassword"
+                                           ng-minlength="8" ng-maxlength="20" ng-model="newUser.confirmPassword"
+                                           ng-class="{'form-control-error' : signUpForm.confirmPassword.$touched && signUpForm.confirmPassword.$invalid, 'form-control-success' : signUpForm.confirmPassword.$touched && signUpForm.confirmPassword.$valid}"
                                            confirm-password="newUser.password">
 
                                     <div ng-show="signUpForm.confirmPassword.$touched">
@@ -130,32 +118,23 @@
                                               ng-show="signUpForm.confirmPassword.$invalid">
                                                 </span>
                                         <span class="sr-only">(success)</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.confirmPassword.$error.required">Password cannot be empty</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.confirmPassword.$error.minlength">Password must be more than 5 characters</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.confirmPassword.$error.maxlength">Password must not exceed 20 characters</span>
-                                        <span class="help-block"
-                                              ng-show="signUpForm.confirmPassword.$error.confirmPassword">Password does not match</span>
                                     </div>
-                                    <!--<pre>{{signUpForm.confirmPassword.$error.confirmPassword}}</pre>-->
+                                    <div class="text-muted text-danger form-input-msg text-sm"  ng-show="signUpForm.confirmPassword.$invalid && signUpForm.confirmPassword.$touched">
+                                        <span ng-show="signUpForm.confirmPassword.$error.required">Password cannot be empty</span>
+                                        <span ng-show="signUpForm.confirmPassword.$error.minlength">Password must be more than 5 characters</span>
+                                        <span ng-show="signUpForm.confirmPassword.$error.maxlength">Password must not exceed 20 characters</span>
+                                        <span ng-show="signUpForm.confirmPassword.$error.confirmPassword">Password does not match</span>
+                                    </div>
                                 </div>
                             </div>
                            </div>
-
-                          
-                           
-
+                        </div>
+                        <div class="row">
                            <div ng-form="locationDetails">
                            <div class="col-md-12">
                              <div class="form-group">
                                     <label for="signup.state">State</label>
-                                    <select name="state" id="signup.state" class="form-control"
-                                            ng-model="newUser.state">
-                                        <!--ng-options="state.name as state.name for state in states"-->
-                                        <!--ng-required="true" -->
-                                        required="true">
+                                    <select name="state" id="signup.state" class="form-control" required="true">
                                         <option value="" selected>Please select a State</option>
                                         <option value="lagos">Lagos</option>
                                         <option value="anambra">Anambra</option>

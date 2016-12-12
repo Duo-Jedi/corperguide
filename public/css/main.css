@@ -168,6 +168,10 @@ p, span, label, .form-control, .btn {
     .landing-page .how-it-works-steps div div h4, .landing-page .how-it-works-steps div div .number {
       color: #9e2329; }
 
+.signup-form .form-input-msg {
+  display: inline;
+  margin: 6px; }
+
 .jumbotron {
   background: none; }
 
@@ -182,6 +186,9 @@ p, span, label, .form-control, .btn {
 
 .text-italics {
   font-style: italics; }
+
+.text-sm {
+  font-style: 10px; }
 
 .text-primary-color {
   color: #050100; }

@@ -99,8 +99,13 @@ p, span, label, .form-control, .btn {
             }
         }
     }
+}
 
-
+.signup-form {
+    .form-input-msg {
+        display: inline;
+        margin:6px;
+    }
 }
 
 .jumbotron {
@@ -121,6 +126,10 @@ p, span, label, .form-control, .btn {
 
 .text-italics {
     font-style: italics;
+}
+
+.text-sm {
+    font-style: 10px;
 }
 
 .text-primary-color {
